@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IceBel.by — Продажа и установка кондиционеров в Минске под ключ</title>
+  <meta name="description" content="Купить кондиционер с установкой в Минске и области. Цены от 1170 BYN. Чистый монтаж за 1 день, гарантия до 5 лет. Индивидуальный подбор для квартир и предприятий. Звоните: +375 29 193 33 73" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Место для Яндекс.Метрики / Google Ads перед запуском рекламы -->
+
+  <style>
+    :root {
+      --bg-deep: #07080f;
+      --bg-dark: #0d0f1a;
+      --bg-card: #111422;
+      --blue-main: #1a8fe3;
+      --blue-bright: #2ba8ff;
+      --silver: #c8d4e0;
+      --green-act: #10b981;
+      --red-promo: #ff4d4d;
+      --white: #ffffff;
+      --text-muted: #8c9ba8;
+      --border: rgba(26,143,227,0.25);
+      --grad-blue: linear-gradient(135deg, #1a8fe3 0%, #0d5fa3 100%);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-deep);
+      color: var(--white);
+      line-height: 1.5;
+    }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+    .section { padding: 64px 0; }
+    .section-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(28px, 4vw, 42px);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .section-sub {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 15px;
+      max-width: 620px;
+      margin: 0 auto 36px;
+    }
+    .blue { color: var(--blue-bright); }
+    .green { color: var(--green-act); }
+    .nowrap { white-space: nowrap; }
+
+    /* Кнопки */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+      text-transform: uppercase;
+    }
+    .btn-primary {
+      background: var(--grad-blue);
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(26,143,227,0.4);
+    }
+    .btn-primary:hover {
+      box-shadow: 0 6px 25px rgba(26,143,227,0.7);
+      transform: translateY(-1px);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--blue-bright);
+      border: 1px solid var(--blue-main);
+    }
+    .btn-outline:hover { background: rgba(26,143,227,0.1); }
+
+    /* HEADER */
+    .header {
+      background: rgba(7,8,15,0.95);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 68px;
+    }
+    .logo-text { font-family: 'Oswald', sans-serif; font-size: 22px; font-weight: 700; }
+    .logo-sub { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+    
+    .header-actions { display: flex; align-items: center; gap: 14px; }
+    .header-site-btn {
+      border: 1px solid rgba(255,255,255,0.2);
+      color: var(--silver);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .header-site-btn:hover { border-color: var(--blue-bright); color: #fff; }
+    .header-tg {
+      background: rgba(34,158,217,0.15);
+      border: 1px solid rgba(34,158,217,0.4);
+      color: #2ba8ff;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .header-phone { font-weight: 700; font-size: 15px; color: var(--white); white-space: nowrap; }
+
+    /* HERO */
+    .hero {
+      padding: 40px 0 60px;
+      background: radial-gradient(ellipse 70% 50% at 50% 20%, rgba(26,143,227,0.18), transparent 70%);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16,185,129,0.15);
+      border: 1px solid rgba(16,185,129,0.3);
+      color: var(--green-act);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    .hero-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(28px, 3.8vw, 44px);
+      line-height: 1.15;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+    }
+    .hero-desc {
+      font-size: 15px;
+      color: var(--silver);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    .hero-bullets {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .bullet-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--silver);
+    }
+    .bullet-item span { color: var(--blue-bright); font-weight: 700; }
+
+    /* Форма захвата */
+    .hero-form-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 24px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+    .form-head-title { font-family: 'Oswald', sans-serif; font-size: 22px; text-align: center; margin-bottom: 4px; }
+    .form-head-sub { text-align: center; font-size: 13px; color: var(--text-muted); margin-bottom: 20px; }
+    .f-group { margin-bottom: 14px; }
+    .f-input {
+      width: 100%;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 8px;
+      padding: 14px 16px;
+      color: #fff;
+      font-size: 15px;
+      outline: none;
+    }
+    .f-input:focus { border-color: var(--blue-bright); background: rgba(255,255,255,0.08); }
+    .f-note { font-size: 11px; color: var(--text-muted); text-align: center; margin-top: 12px; }
+
+    /* КАТАЛОГ: КАРТОЧКИ ЦЕН */
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+    .cat-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 28px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s;
+      position: relative;
+    }
+    .cat-card:hover {
+      border-color: var(--blue-main);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .cat-badge {
+      display: inline-block;
+      background: rgba(26,143,227,0.15);
+      color: var(--blue-bright);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      align-self: flex-start;
+    }
+    .promo-badge {
+      position: absolute;
+      top: -12px;
+      right: 16px;
+      background: linear-gradient(135deg, #e03b3b, #b02020);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(224,59,59,0.5);
+    }
+    .cat-area { font-family: 'Oswald', sans-serif; font-size: 22px; margin-bottom: 6px; }
+    .cat-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
+    .cat-features { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: var(--silver); margin-bottom: 20px; }
+    .cat-features li::before { content: '✓ '; color: var(--blue-bright); font-weight: 700; }
+    .cat-price-wrap { margin-bottom: 16px; }
+    .cat-price-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; }
+    .cat-price { font-family: 'Oswald', sans-serif; font-size: 32px; color: var(--blue-bright); line-height: 1; }
+
+    /* БЛОК ДЛЯ ПРЕДПРИЯТИЙ / B2B */
+    .b2b-banner {
+      background: linear-gradient(135deg, #0d1e35 0%, #081120 100%);
+      border: 1px solid var(--blue-main);
+      border-radius: 16px;
+      padding: 36px 32px;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 32px;
+      align-items: center;
+      box-shadow: 0 0 30px rgba(26,143,227,0.2);
+    }
+    .b2b-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 26px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .b2b-desc { font-size: 14px; color: var(--silver); margin-bottom: 18px; line-height: 1.6; }
+    .b2b-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+    .b2b-tag {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      color: var(--silver);
+    }
+
+    /* МОНТАЖ БЕЗ ПЫЛИ */
+    .install-section { background: var(--bg-dark); border-top: 1px solid rgba(255,255,255,0.06); }
+    .install-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .install-item {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(26,143,227,0.15);
+      border-radius: 12px;
+      padding: 24px 18px;
+      text-align: center;
+    }
+    .inst-icon { font-size: 32px; margin-bottom: 12px; display: block; }
+    .inst-title { font-family: 'Oswald', sans-serif; font-size: 17px; margin-bottom: 6px; }
+    .inst-desc { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    /* БРЕНДЫ */
+    .brands-section { padding: 40px 0; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .brands-wrap {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .brand-tag {
+      padding: 8px 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--silver);
+    }
+
+    /* ФУТЕР И ПРЯМАЯ СВЯЗЬ */
+    .footer-action {
+      background: linear-gradient(180deg, #0d1220 0%, #040508 100%);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 48px 0 24px;
+      text-align: center;
+    }
+    .action-contacts {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin: 24px 0 36px;
+      flex-wrap: wrap;
+    }
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 15px;
+    }
+    .btn-call { background: var(--grad-blue); color: #fff; }
+    .btn-telegram { background: #229ed9; color: #fff; }
+    .btn-website { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; }
+
+    .legal-box {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 20px;
+      font-size: 12px;
+      color: #64748b;
+      line-height: 1.6;
+    }
+
+    /* МОДАЛЬНОЕ ОКНО */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0; z-index: 9999;
+      background: rgba(0,0,0,0.8); backdrop-filter: blur(5px);
+      align-items: center; justify-content: center;
+    }
+    .modal-box {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 14px; padding: 32px 24px; max-width: 360px; width: 90%; text-align: center;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .catalog-grid { grid-template-columns: 1fr; }
+      .b2b-banner { grid-template-columns: 1fr; text-align: center; }
+      .b2b-tags { justify-content: center; }
+      .install-grid { grid-template-columns: 1fr 1fr; }
+      .hero-bullets { grid-template-columns: 1fr; }
+      .section { padding: 44px 0; }
+      .header-actions { gap: 8px; }
+      .header-site-btn { display: none; }
+    }
+    @media (max-width: 500px) {
+      .install-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ХЕДЕР -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <div>
+          <div class="logo-text">IceBel<span class="blue">.by</span></div>
+          <div class="logo-sub">Кондиционеры · Продажа и монтаж</div>
+        </div>
+        
+        <div class="header-actions">
+          <a href="https://icebel.by" target="_blank" class="header-site-btn">🌐 icebel.by</a>
+          <a href="https://t.me/+375445680155" target="_blank" class="header-tg" onclick="trackEvent('tg_click')">✈ Telegram</a>
+          <a href="tel:+375291933373" class="header-phone" onclick="trackEvent('phone_click')">📞 +375 29 193 33 73</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ЭКРАН 1: HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-badge">❄ Официальный дилер климатической техники</div>
+          <h1 class="hero-title">
+            Продажа кондиционеров<br>
+            с монтажом в Минске<br>
+            <span class="blue nowrap">«под ключ»</span>
+          </h1>
+          <p class="hero-desc">
+            Бесплатный подбор под вашу площадь за 5 минут. Доставка и чистый монтаж без пыли за 1 день. Официальная гарантия до 5 лет на оборудование и установку.
+          </p>
+
+          <div class="hero-bullets">
+            <div class="bullet-item"><span>✓</span> Монтаж за 1 день без пыли</div>
+            <div class="bullet-item"><span>✓</span> Гарантия на монтаж до 5 лет</div>
+            <div class="bullet-item"><span>✓</span> Работа на холод и обогрев (-25°C)</div>
+            <div class="bullet-item"><span>✓</span> Опыт работы более 13 лет</div>
+          </div>
+        </div>
+
+        <!-- Форма захвата: только 2 поля -->
+        <div class="hero-form-card">
+          <div class="form-head-title">Получить подбор и расчет цены</div>
+          <div class="form-head-sub">Специалист перезвонит за 5 минут с точной сметой</div>
+          <form onsubmit="sendLead(event, this, 'Заявка с первого экрана (Подбор)')">
+            <div class="f-group">
+              <input type="text" name="name" class="f-input" placeholder="Ваше имя *" required />
+            </div>
+            <div class="f-group">
+              <input type="tel" name="phone" class="f-input" placeholder="Номер телефона (+375...) *" required />
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%; padding:16px; font-size:15px;">
+              Подобрать кондиционер ✈
+            </button>
+            <div class="f-note">Бесплатный расчет. Скидка на монтаж при заказе кондиционера.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- БРЕНДЫ -->
+  <div class="brands-section">
+    <div class="container">
+      <div style="font-size:13px; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px;">Официальные поставки от проверенных производителей:</div>
+      <div class="brands-wrap">
+        <span class="brand-tag">Gree</span>
+        <span class="brand-tag">Midea</span>
+        <span class="brand-tag">Haier</span>
+        <span class="brand-tag">Cooper&Hunter</span>
+        <span class="brand-tag">LG</span>
+        <span class="brand-tag">Daikin</span>
+        <span class="brand-tag">Mitsubishi Electric</span>
+        <span class="brand-tag">Electrolux</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ЭКРАН 2: ПОДБОР ПО ПЛОЩАДИ -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Подберите кондиционер <span class="blue">под вашу площадь</span></h2>
+      <p class="section-sub">Цены на популярные инверторные модели с низким энергопотреблением (класс A+++)</p>
+
+      <div class="catalog-grid">
+        <!-- 20-25 m2 -->
+        <div class="cat-card">
+          <div>
+            <span class="cat-badge">Для 1 комнаты / кухни</span>
+            <div class="cat-area">До 20–25 м² (07–09 BTU)</div>
+            <div class="cat-sub">Идеально для спален, детских и небольших комнат</div>
+            <ul class="cat-features">
+              <li>Тихая работа (от 19 дБ — не слышно ночью)</li>
+              <li>Инверторный компрессор (экономия 40% света)</li>
+              <li>Обогрев в межсезонье до -15°C</li>
+              <li>Ионизация и фильтрация воздуха</li>
+            </ul>
+          </div>
+          <div>
+            <div class="cat-price-wrap">
+              <div class="cat-price-label">Цена оборудования:</div>
+              <div class="cat-price">от 1 170 <span style="font-size:18px">BYN</span></div>
+            </div>
+            <a href="tel:+375291933373" class="btn btn-outline" style="width:100%;" onclick="trackEvent('phone_click')">Узнать наличие и модели</a>
+          </div>
+        </div>
+
+        <!-- 30-35 m2 (АКЦИЯ) -->
+        <div class="cat-card" style="border-color:var(--blue-main); background:linear-gradient(180deg,#0d1e35 0%,#0c101c 100%);">
+          <div class="promo-badge">🔥 Акция</div>
+          <div>
+            <span class="cat-badge" style="background:var(--blue-main); color:#fff;">Хит продаж</span>
+            <div class="cat-area">До 30–35 м² (12 BTU)</div>
+            <div class="cat-sub">Самый популярный выбор для гостиных и 2-комнатных квартир</div>
+            <ul class="cat-features">
+              <li>Быстрое охлаждение за 5 минут (Turbo)</li>
+              <li>Wi-Fi управление со смартфона</li>
+              <li>Работа на обогрев до -20°C...-25°C</li>
+              <li>Самоочистка внутреннего блока</li>
+            </ul>
+          </div>
+          <div>
+            <div class="cat-price-wrap">
+              <div class="cat-price-label" style="color:var(--red-promo); font-weight:700;">Акционная цена:</div>
+              <div class="cat-price">от 1 300 <span style="font-size:18px">BYN</span></div>
+            </div>
+            <a href="tel:+375291933373" class="btn btn-primary" style="width:100%;" onclick="trackEvent('phone_click')">Заказать подбор по акции</a>
+          </div>
+        </div>
+
+        <!-- 50-70 m2 -->
+        <div class="cat-card">
+          <div>
+            <span class="cat-badge">Для домов и студий</span>
+            <div class="cat-area">От 50 до 70+ м² (18–24 BTU)</div>
+            <div class="cat-sub">Мощные сплит-системы и мульти-сплит для больших пространств</div>
+            <ul class="cat-features">
+              <li>Охлаждение нескольких комнат одновременно</li>
+              <li>Полноценный тепловой насос (до -25°C)</li>
+              <li>Длинные трассы без потери мощности</li>
+              <li>Повышенная надежность японских узлов</li>
+            </ul>
+          </div>
+          <div>
+            <div class="cat-price-wrap">
+              <div class="cat-price-label">Цена оборудования:</div>
+              <div class="cat-price">от 2 190 <span style="font-size:18px">BYN</span></div>
+            </div>
+            <a href="tel:+375291933373" class="btn btn-outline" style="width:100%;" onclick="trackEvent('phone_click')">Получить расчет проекта</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- БЛОК ДЛЯ ПРЕДПРИЯТИЙ И ОФИСОВ -->
+      <div class="b2b-banner">
+        <div>
+          <div class="cat-badge" style="background:rgba(16,185,129,0.2); color:var(--green-act);">Для бизнеса и предприятий</div>
+          <h3 class="b2b-title">Индивидуальный подбор для юридических лиц</h3>
+          <p class="b2b-desc">
+            Проектирование и оснащение кондиционированием офисов, магазинов, серверных, производственных и складских помещений. Работаем с НДС, предоставляем полный пакет закрывающих документов.
+          </p>
+          <div class="b2b-tags">
+            <span class="b2b-tag">🏢 Офисы и опенспейсы</span>
+            <span class="b2b-tag">🖥️ Серверные (согласователи)</span>
+            <span class="b2b-tag">🏬 Магазины и кафе</span>
+            <span class="b2b-tag">📑 Безналичный расчет с НДС</span>
+          </div>
+        </div>
+
+        <div>
+          <a href="tel:+375291933373" class="btn btn-primary" style="width:100%; padding:16px; margin-bottom:10px;" onclick="trackEvent('phone_click')">
+            📞 Получить КП за 1 час
+          </a>
+          <a href="https://t.me/+375445680155" target="_blank" class="btn btn-outline" style="width:100%; font-size:13px; padding:10px;" onclick="trackEvent('tg_click')">
+            ✈ Отправить проект в Telegram
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ЭКРАН 3: МОНТАЖ БЕЗ ПЫЛИ -->
+  <section class="install-section section">
+    <div class="container">
+      <h2 class="section-title">Профессиональный монтаж <span class="blue">без грязи и пыли</span></h2>
+      <p class="section-sub">Устанавливаем кондиционеры аккуратно даже в помещениях с готовым чистовым ремонтом</p>
+
+      <div class="install-grid">
+        <div class="install-item">
+          <span class="inst-icon">💎</span>
+          <div class="inst-title">Алмазное бурение</div>
+          <p class="inst-desc">Ровные отверстия без сколов фасада и без вибрации стен с промышленным пылесосом.</p>
+        </div>
+
+        <div class="install-item">
+          <span class="inst-icon">🛠</span>
+          <div class="inst-title">ГОСТ медь и кабель</div>
+          <p class="inst-desc">Используем только толстостенную медную трубу и европейские кронштейны, исключая утечки.</p>
+        </div>
+
+        <div class="install-item">
+          <span class="inst-icon">⏱</span>
+          <div class="inst-title">Монтаж за 2–3 часа</div>
+          <p class="inst-desc">Слаженная бригада выполняет установку быстро, убирает строительный мусор за собой.</p>
+        </div>
+
+        <div class="install-item">
+          <span class="inst-icon">📜</span>
+          <div class="inst-title">Гарантийный талон</div>
+          <p class="inst-desc">Официальный договор и гарантия до 5 лет на все выполненные монтажные работы.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ЭКРАН 4: ФУТЕР И ПРЯМАЯ СВЯЗЬ -->
+  <footer class="footer-action">
+    <div class="container">
+      <h2 class="section-title" style="font-size:28px;">Нужна консультация по выбору? Мы на связи</h2>
+      <p style="color:var(--text-muted); font-size:14px;">Поможем подобрать надежную модель под ваш бюджет и планировку</p>
+
+      <div class="action-contacts">
+        <a href="tel:+375291933373" class="contact-btn btn-call" onclick="trackEvent('phone_click')">
+          📞 +375 29 193 33 73
+        </a>
+        <a href="https://t.me/+375445680155" target="_blank" class="contact-btn btn-telegram" onclick="trackEvent('tg_click')">
+          ✈ Telegram: +375 44 568 01 55
+        </a>
+        <a href="https://icebel.by" target="_blank" class="contact-btn btn-website">
+          🌐 Наш сайт icebel.by
+        </a>
+      </div>
+
+      <div class="legal-box">
+        ИП / ООО «АйсБел Климат» · УНП: 193XXXXXX · г. Минск, Республика Беларусь<br>
+        © 2013–2026 IceBel.by · Опыт более 13 лет. Все права защищены.
+      </div>
+    </div>
+  </footer>
+
+  <!-- МОДАЛКА УСПЕХА -->
+  <div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
+    <div class="modal-box">
+      <div style="font-size:48px; margin-bottom:12px;">✅</div>
+      <h3 style="font-family:'Oswald',sans-serif; font-size:22px; margin-bottom:8px;">Заявка принята!</h3>
+      <p style="color:var(--text-muted); font-size:13px; margin-bottom:18px;">Специалист свяжется с вами в течение 5–10 минут с подбором моделей.</p>
+      <button onclick="closeModal()" class="btn btn-primary" style="width:100%;">Понятно</button>
+    </div>
+  </div>
+
+  <script>
+    // НАСТРОЙКА TELEGRAM ДЛЯ ПОЛУЧЕНИЯ ЗАЯВОК В БОТ
+    const TG_BOT_TOKEN = '';
+    const TG_CHAT_ID   = '';
+
+    function trackEvent(name) {
+      if (typeof ym !== 'undefined') { /* ym(XXXXXX, 'reachGoal', name); */ }
+      if (typeof gtag !== 'undefined') { gtag('event', name); }
+      console.log('Event:', name);
+    }
+
+    async function sendLead(e, form, source) {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      const name = form.name.value;
+      const phone = form.phone.value;
+
+      btn.disabled = true;
+      btn.innerText = 'Отправка...';
+
+      if (TG_BOT_TOKEN && TG_CHAT_ID) {
+        const text = `🔥 *ЗАЯВКА НА ПОКУПКУ / ПОДБОР КОНДИЦИОНЕРА (ICEBEL.BY)*\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n🛒 Тип: ${source || 'Продажа с установкой'}`;
+        try {
+          await fetch(`https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ chat_id: TG_CHAT_ID, text: text, parse_mode: 'Markdown' })
+          });
+        } catch (err) {}
+      }
+
+      trackEvent('lead_submit');
+      btn.disabled = false;
+      btn.innerText = 'Подобрать кондиционер ✈';
+      form.reset();
+      document.getElementById('modal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
